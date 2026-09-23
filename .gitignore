@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# segredos — nunca sobem (a Semana 09 usa chaves de API)
+.env
+.env.*
+!.env.example

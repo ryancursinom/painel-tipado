@@ -1,32 +1,30 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+#Painel Tipado
+Painel da turma com duas telas — **Chamada** (presença) e **Entregas** — sobre um mesmo estado `Aluno[]`, tipado a fundo. Projeto da Semana 07 de DAD (React + TypeScript).
 
-Currently, two official plugins are available:
+## Rodar
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+    npm install     # instala as dependências (usa o package-lock.json — versões travadas)
+    npm run dev     # sobe o servidor de desenvolvimento (Vite)
 
-## React Compiler
+Abra a URL que o Vite mostrar (ex.: http://localhost:5173).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Scripts
 
-## Expanding the Oxlint configuration
+- `npm run dev` — servidor de desenvolvimento com HMR.
+- `npm run build` — checa os tipos (`tsc -b`) e gera o `dist/`. **É o portão de tipo.**
+- `npm run lint` — roda o oxlint (a regra `no-explicit-any` está ligada: `any` é proibido).
+- `npm run preview` — serve o `dist/` já compilado.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Convenções
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+- Domínio (os tipos do projeto) em `src/types/`.
+- Um componente por pasta em `src/components/<Nome>/index.tsx`.
+- Node: use a versão de `.nvmrc` (`nvm use`).
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+> 💡 **A última linha do README diz `nvm use` — não vá rodar isso.** O `nvm` é um programa que gerencia várias versões do Node na mesma máquina; se você instalou o Node direto do site (como o Passo 0 mandou), **você não tem nvm e não precisa dele**. Essa linha é um bilhete para quem usa. Se você rodar, vai receber `'nvm' não é reconhecido` — e está tudo certo.
+
+Por último, coloque o Cabecalho no palco:
+
+📄 **No arquivo `src/App.tsx`** — **SUBSTITUA TUDO** (`Ctrl+A`, cole, `Ctrl+S`):
