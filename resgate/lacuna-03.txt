@@ -1,0 +1,1 @@
+            <Route path="/aluno/:id" element={<FichaAluno alunos={alunos} carregando={carregando} />} />

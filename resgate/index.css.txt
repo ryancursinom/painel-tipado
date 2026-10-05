@@ -1,0 +1,2 @@
+/* lacuna 6: acrescente esta linha na regra de foco do src/index.css, logo abaixo de `button:focus-visible,` */
+a:focus-visible,
