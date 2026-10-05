@@ -1,4 +1,11 @@
-function CartaoEntrega({ aluno, onEntrega }: any) {
+import type { Aluno } from '../../types/aluno'
+
+interface CartaoEntregaProps {
+    aluno: Aluno,
+    onEntrega: (id: number) => void
+}
+
+function CartaoEntrega({ aluno, onEntrega }: CartaoEntregaProps) {
     return (
       <li className="cartao">
         

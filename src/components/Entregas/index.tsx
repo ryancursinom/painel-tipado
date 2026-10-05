@@ -1,8 +1,14 @@
 import CartaoEntrega from '../CartaoEntrega'
+import type { Aluno } from '../../types/aluno'
 
-function Entregas({ alunos, onEntrega }: any) {
-    
-  const total = alunos.reduce((soma: any, aluno: any) => soma + aluno.entregas, 0)
+interface EntregasProps {
+    alunos: Aluno[],
+    onEntrega: (id: number) => void
+}
+
+function Entregas({ alunos, onEntrega }: EntregasProps) {
+
+  const total = alunos.reduce((soma: number, aluno) => soma + aluno.entregas, 0)
 
   return (
     <section className="quadro">
@@ -11,7 +17,7 @@ function Entregas({ alunos, onEntrega }: any) {
       <p className="placar">Total de entregas: {total}</p>
 
       <ul>
-        {alunos.map((aluno: any) => (
+        {alunos.map((aluno) => (
           <CartaoEntrega key={aluno.id} aluno={aluno} onEntrega={onEntrega} />
         ))}
       </ul>
