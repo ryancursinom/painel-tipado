@@ -23,7 +23,14 @@ dist-ssr
 *.sln
 *.sw?
 
+<<<<<<< HEAD
 # segredos — nunca sobem (a Semana 09 usa chaves de API)
 .env
 .env.*
 !.env.example
+=======
+# configuração local — nunca sobe (medido na Semana 09: VITE_* vai para o bundle público)
+.env
+.env.*
+!.env.example
+>>>>>>> 6503238 (feat: conexão com projeto da outra aula)

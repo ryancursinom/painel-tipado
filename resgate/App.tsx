@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-import { useState } from 'react'
-import type { Aluno } from './types/aluno'
-import type { Aba } from './types/aba'
-import Cabecalho from './components/Cabecalho'
-import NavAbas from './components/NavAbas'
-import Chamada from './components/Chamada'
-import Entregas from './components/Entregas'
-
-const TURMA_INICIAL: Aluno[] = [
-  { id: 1, nome: 'Ana Souza', presente: true, entregas: 3 },
-  { id: 2, nome: 'Beto Lima', presente: false, entregas: 1 },
-  { id: 3, nome: 'Bia Costa', presente: true, entregas: 4 },
-  { id: 4, nome: 'Caio Dias', presente: true, entregas: 0 },
-]
-
-function App() {
-  const [alunos, setAlunos] = useState<Aluno[]>(TURMA_INICIAL)
-  const [aba, setAba] = useState<Aba>('chamada')
-
-  function marcarPresenca(id: number) {
-    setAlunos(alunos.map(aluno =>
-=======
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router'
 import { useEffect, useState } from 'react'
 import type { Aluno } from './types/aluno'
@@ -39,21 +16,16 @@ function App() {
 
   useEffect(() => {
     async function carregar() {
-
       setCarregando(true)
       setErro('')
-
       try {
-
-        const dados = await buscarTurma()
+        const dados = await buscarTurma()   // nenhum fetch aqui: quem fala com a rede e' o servico
         setAlunos(dados)
-
       } catch (falha) {
-
+        // a frase que a pessoa le' foi escrita pelo SERVICO; aqui so' vira estado
         setErro(falha instanceof Error ? falha.message : 'Não foi possível carregar a turma.')
-
       } finally {
-        setCarregando(false)
+        setCarregando(false)   // deu certo ou errado, a espera acabou
       }
     }
 
@@ -62,35 +34,17 @@ function App() {
 
   function marcarPresenca(id: number) {
     setAlunos(anteriores => anteriores.map(aluno =>
->>>>>>> 6503238 (feat: conexão com projeto da outra aula)
       aluno.id === id ? { ...aluno, presente: !aluno.presente } : aluno
     ))
   }
 
   function registrarEntrega(id: number) {
-<<<<<<< HEAD
-    setAlunos(alunos.map(aluno =>
-=======
     setAlunos(anteriores => anteriores.map(aluno =>
->>>>>>> 6503238 (feat: conexão com projeto da outra aula)
       aluno.id === id ? { ...aluno, entregas: aluno.entregas + 1 } : aluno
     ))
   }
 
   return (
-<<<<<<< HEAD
-    <main className="painel">
-      <Cabecalho />
-      <NavAbas aba={aba} onTrocar={setAba} />
-      {aba === 'chamada'
-        ? <Chamada alunos={alunos} onPresenca={marcarPresenca} />
-        : <Entregas alunos={alunos} onEntrega={registrarEntrega} />}
-    </main>
-  )
-}
-
-export default App
-=======
     <BrowserRouter>
       <div className="painel">
         <Cabecalho />
@@ -98,8 +52,7 @@ export default App
         {/* as abas viraram LINKS: cada tela tem uma URL, e a URL sobrevive ao F5 */}
         <nav className="abas" aria-label="Telas do painel">
           <NavLink to="/" end className={({ isActive }) => (isActive ? 'aba ativa' : 'aba')}>Chamada</NavLink>
-          
-          <NavLink to="/entregas" end className={({ isActive }) => (isActive ? 'aba ativa' : 'aba')}>Entregas</NavLink>
+          <NavLink to="/entregas" className={({ isActive }) => (isActive ? 'aba ativa' : 'aba')}>Entregas</NavLink>
         </nav>
 
         <main>
@@ -112,15 +65,14 @@ export default App
 
           <Routes>
             <Route path="/" element={<Chamada alunos={alunos} onPresenca={marcarPresenca} />} />
-
-            <Route path="/entregas" element={<Entregas alunos={alunos} onEntrega={registrarEntrega} />}
-             />
-
-            <Route path="/aluno/:id" element={<FichaAluno alunos={alunos} carregando={carregando} />}
-             />
-
-            <Route path="*" element={<NaoEncontrado/>}
-             />
+            <Route path="/entregas" element={<Entregas alunos={alunos} onEntrega={registrarEntrega} />} />
+            {/* a URL carrega um DADO: o :id diz de quem e' a ficha */}
+            <Route path="/aluno/:id" element={<FichaAluno alunos={alunos} carregando={carregando} />} />
+            {/* qualquer outro endereco: a rota existe, e ela mostra uma TELA de erro.
+                A ORDEM NAO DECIDE: o React Router escolhe a rota MAIS ESPECIFICA (medido: com
+                "*" na primeira linha, as outras telas continuam abrindo). Ela fica por ultimo
+                por LEITURA — e' o "senao" do mapa, e quem le espera o "senao" no fim. */}
+            <Route path="*" element={<NaoEncontrado />} />
           </Routes>
         </main>
       </div>
@@ -129,4 +81,3 @@ export default App
 }
 
 export default App
->>>>>>> 6503238 (feat: conexão com projeto da outra aula)

@@ -1,0 +1,30 @@
+RESGATE — use DEPOIS de tentar, nunca antes.
+
+Cada lacuna-NN.txt tem SO' a(s) linha(s) prontas — sem cabecalho, sem nada a apagar.
+Abra, selecione tudo, copie, e cole por cima do que a tabela diz:
+
+  arquivo         vai em                                       cole por cima de...
+  lacuna-01.txt   src/components/Cabecalho/index.tsx           a marca E a linha velha logo abaixo dela
+  lacuna-02.txt   src/App.tsx                                  a marca
+  lacuna-03.txt   src/App.tsx                                  a marca
+  lacuna-04.txt   src/components/CartaoPresenca/index.tsx      a marca E a linha velha logo abaixo dela
+  lacuna-05.txt   src/components/FichaAluno/index.tsx          a marca E a linha velha logo abaixo dela
+  lacuna-05b.txt  src/components/FichaAluno/index.tsx          a marca E a linha velha logo abaixo dela
+  lacuna-06.txt   src/index.css                                substitui a linha `button:focus-visible,` que ja existe E a marca (sao duas linhas; a nova e' a segunda)
+  lacuna-07.txt   src/App.tsx                                  a marca
+  lacuna-08.txt   src/services/turma.ts                        a marca
+  lacuna-09.txt   src/App.tsx                                  a marca
+  lacuna-10.txt   src/App.tsx                                  substitui do `setAlunos(dados)` ate' o `}` que fecha o catch (a marca e as linhas em volta)
+  lacuna-11.txt   src/services/turma.ts                        a marca E a linha velha logo abaixo dela
+
+App.tsx, FichaAluno.tsx, CartaoPresenca.tsx, NaoEncontrado.tsx, turma.ts
+  → o arquivo INTEIRO e pronto, se o seu se perdeu. Cole por cima (Ctrl+A no arquivo aberto, e cole).
+    App.tsx vai em src/App.tsx; os componentes em src/components/<Nome>/index.tsx; turma.ts em src/services/.
+
+N3/  → o esqueleto do Nivel 3 do Desafio que VALE (o fetch no servico, nunca no componente).
+       O nome de cada arquivo diz onde ele vai: `src__services__resumo.ts` = src/services/resumo.ts,
+       `public__resumo.json` = public/resumo.json. Falta nele o que o Desafio pede que VOCE escreva:
+       os tres estados nas regioes vivas.
+
+NAO use os arquivos de `blocos_da_aula/` da aula longa (04-, 07A-, 07C-, 12-): o App.tsx de la'
+nao tem a rede nem as marcas, e colar por cima apaga metade do seu trabalho.

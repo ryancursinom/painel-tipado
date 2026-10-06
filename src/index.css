@@ -1,12 +1,20 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+<<<<<<< HEAD
   color: #eaf0f7;
+=======
+  color: var(--cor-texto);
+>>>>>>> 6503238 (feat: conexão com projeto da outra aula)
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+<<<<<<< HEAD
   background: linear-gradient(160deg, #1b2a52, #0d1420);
+=======
+  background: linear-gradient(160deg, var(--cor-fundo-1), var(--cor-fundo-2));
+>>>>>>> 6503238 (feat: conexão com projeto da outra aula)
 }
 
 .painel {
@@ -18,28 +26,48 @@ body {
 .cabecalho h1 {
   margin: 0;
   font-size: 2rem;
+<<<<<<< HEAD
   color: #7cc0ff;
 }
 
 .cabecalho p {
   margin: 4px 0 24px;
   color: #9db4d0;
+=======
+  color: var(--cor-acento);
+}
+
+.cabecalho p {
+  margin: var(--espaco-1) 0 24px;
+  color: var(--cor-texto-suave);
+>>>>>>> 6503238 (feat: conexão com projeto da outra aula)
   font-style: italic;
 }
 
 .quadro {
+<<<<<<< HEAD
   background: #16223d;
   border: 1px solid #2b3b5e;
   border-radius: 12px;
+=======
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-cartao);
+>>>>>>> 6503238 (feat: conexão com projeto da outra aula)
   padding: 20px 22px;
 }
 
 .quadro h2 {
+<<<<<<< HEAD
   margin: 0 0 8px;
+=======
+  margin: 0 0 var(--espaco-2);
+>>>>>>> 6503238 (feat: conexão com projeto da outra aula)
   font-size: 1.3rem;
 }
 
 .placar {
+<<<<<<< HEAD
   margin: 0 0 4px;
   font-weight: bold;
   color: #8fe0b0;
@@ -52,6 +80,23 @@ body {
   border-radius: 999px;
   background: #143d2a;
   color: #8fe0b0;
+=======
+  margin: 0 0 var(--espaco-1);
+  font-weight: bold;
+  color: var(--cor-ok-texto);
+}
+
+.aviso { margin: 0 0 16px; }
+.aviso:empty { margin: 0; }
+
+.completa {
+  display: inline-block;
+  margin: 0;
+  padding: 3px 12px;
+  border-radius: var(--raio-pilula);
+  background: var(--cor-ok-fundo);
+  color: var(--cor-ok-texto);
+>>>>>>> 6503238 (feat: conexão com projeto da outra aula)
   font-weight: bold;
   font-size: 0.95rem;
 }
@@ -65,9 +110,15 @@ body {
 .cartao {
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   gap: 12px;
   padding: 10px 12px;
   border-top: 1px solid #2b3b5e;
+=======
+  gap: var(--espaco-3);
+  padding: 10px 12px;
+  border-top: 1px solid var(--cor-borda);
+>>>>>>> 6503238 (feat: conexão com projeto da outra aula)
 }
 
 .cartao .nome {
@@ -79,7 +130,11 @@ body {
   text-align: right;
   font-variant-numeric: tabular-nums;
   font-weight: bold;
+<<<<<<< HEAD
   color: #7cc0ff;
+=======
+  color: var(--cor-acento);
+>>>>>>> 6503238 (feat: conexão com projeto da outra aula)
 }
 
 .badge {
@@ -89,6 +144,7 @@ body {
   font-size: 0.95rem;
   font-weight: bold;
   padding: 3px 10px;
+<<<<<<< HEAD
   border-radius: 999px;
 }
 
@@ -100,40 +156,76 @@ body {
 .badge.nope {
   background: #4a2a14;
   color: #ffcf9e;
+=======
+  border-radius: var(--raio-pilula);
+}
+
+.badge.ok {
+  background: var(--cor-ok-fundo);
+  color: var(--cor-ok-texto);
+}
+
+.badge.nope {
+  background: var(--cor-nope-fundo);
+  color: var(--cor-nope-texto);
+>>>>>>> 6503238 (feat: conexão com projeto da outra aula)
 }
 
 .cartao button {
   min-width: 150px;
   text-align: center;
+<<<<<<< HEAD
   border: 1px solid #4a5a7e;
   background: #22314f;
   color: #cbd8ec;
   border-radius: 6px;
+=======
+  border: 1px solid var(--cor-botao-borda);
+  background: var(--cor-botao-fundo);
+  color: var(--cor-botao-texto);
+  border-radius: var(--raio-botao);
+>>>>>>> 6503238 (feat: conexão com projeto da outra aula)
   padding: 6px 10px;
   cursor: pointer;
 }
 
 .cartao button:hover {
+<<<<<<< HEAD
   background: #2c3c60;
+=======
+  background: var(--cor-botao-hover);
+>>>>>>> 6503238 (feat: conexão com projeto da outra aula)
 }
 
 .abas {
   display: flex;
+<<<<<<< HEAD
   gap: 8px;
+=======
+  gap: var(--espaco-2);
+>>>>>>> 6503238 (feat: conexão com projeto da outra aula)
   margin: 0 0 16px;
 }
 
 .aba {
+<<<<<<< HEAD
   border: 1px solid #2b3b5e;
   background: #101a30;
   color: #cbd8ec;
   border-radius: 8px 8px 0 0;
+=======
+  border: 1px solid var(--cor-borda);
+  background: var(--cor-aba-fundo);
+  color: var(--cor-botao-texto);
+  border-radius: var(--raio-aba) var(--raio-aba) 0 0;
+>>>>>>> 6503238 (feat: conexão com projeto da outra aula)
   padding: 8px 18px;
   cursor: pointer;
   font-size: 0.95rem;
 }
 
 .aba:hover {
+<<<<<<< HEAD
   background: #1a2740;
 }
 
@@ -143,3 +235,88 @@ body {
   border-bottom: 3px solid #7cc0ff;
   font-weight: bold;
 }
+=======
+  background: var(--cor-aba-hover);
+}
+
+.aba.ativa {
+  background: var(--cor-superficie);
+  color: var(--cor-acento);
+  border-bottom: 3px solid var(--cor-acento);
+  font-weight: bold;
+}
+
+.busca {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-1);
+  margin: 0 0 16px;
+}
+
+.busca label {
+  font-size: 0.9rem;
+  color: var(--cor-texto-suave);
+}
+
+.busca input {
+  border: 1px solid var(--cor-botao-borda);
+  background: var(--cor-aba-fundo);
+  color: var(--cor-texto);
+  border-radius: var(--raio-botao);
+  padding: 8px 10px;
+  font-size: 0.95rem;
+}
+
+button:focus-visible,
+.a:focus-visible,
+.aba:focus-visible,
+.busca input:focus-visible {
+  outline: 3px solid var(--cor-foco);
+  outline-offset: 2px;
+}
+
+.aba { text-decoration: none; }
+
+/* ---- S09: a URL carrega um dado (a ficha do aluno) ---- */
+.cartao .nome a {
+  color: var(--cor-texto);
+  text-decoration: underline;
+  text-decoration-color: var(--cor-texto-suave);   /* 7,4:1 sobre o quadro; com --cor-borda era 1,4:1 e sumia no projetor */
+  text-underline-offset: 3px;
+}
+
+.cartao .nome a:hover {
+  text-decoration-color: var(--cor-acento);
+}
+
+.voltar {
+  display: inline-block;
+  margin: var(--espaco-3) 0 0;
+  color: var(--cor-acento);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: bold;
+}
+
+/* no celular (390 px) o cartao estourava o quadro: nome + pilula + botao nao cabem
+   numa linha de 280 px. Quebra em duas linhas em vez de vazar (medido). */
+@media (max-width: 480px) {
+  .cartao { flex-wrap: wrap; }
+  .cartao .nome { flex-basis: 100%; }
+  .cartao button { min-width: 0; flex: 1; }
+}
+
+/* polimento medido (conselho de 27/09): nada disto muda comportamento, so' leitura */
+button, input { font: inherit; }               /* o botao vinha em Arial 13 px no meio de system-ui 16 px */
+.cartao button { font-size: 0.95rem; }
+.busca input::placeholder { color: var(--cor-texto-suave); opacity: 1; }   /* 8,1:1; com a opacidade padrao era 3,8:1 */
+.quadro .erro { font-weight: normal; }         /* na tela de erro, a explicacao nao grita */
+:root {                                        /* os dois hovers da S08 mal apareciam: 1,19:1 e 1,16:1 (medido) */
+  --cor-botao-hover: #3a4d78;                  /* 1,55:1 sobre o botao; texto 5,8:1 */
+  --cor-aba-hover: #26365a;                    /* 1,45:1 sobre a aba; texto 8,3:1 */
+}
+
+/* ---- S09: a rede tem uma cor de erro ---- */
+.erro { margin: 0 0 16px; color: var(--cor-erro-texto); font-weight: bold; }
+.erro:empty { margin: 0; }
+>>>>>>> 6503238 (feat: conexão com projeto da outra aula)
