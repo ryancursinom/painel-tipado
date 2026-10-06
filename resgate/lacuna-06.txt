@@ -1,0 +1,2 @@
+button:focus-visible,
+a:focus-visible,

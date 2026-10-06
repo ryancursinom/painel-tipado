@@ -1,0 +1,7 @@
+        setAlunos(dados)
+      } catch (falha) {
+        // a frase que a pessoa le' foi escrita pelo SERVICO; aqui so' vira estado
+        setErro(falha instanceof Error ? falha.message : 'Não foi possível carregar a turma.')
+      } finally {
+        setCarregando(false)   // deu certo ou errado, a espera acabou
+      }

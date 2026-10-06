@@ -1,0 +1,1 @@
+      <span className="nome"><Link to={`/aluno/${aluno.id}`}>{aluno.nome}</Link></span>

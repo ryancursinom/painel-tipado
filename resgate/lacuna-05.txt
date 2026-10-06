@@ -1,0 +1,2 @@
+  const procurado = id === undefined ? undefined : Number(id)
+  const aluno = procurado === undefined ? undefined : alunos.find(item => item.id === procurado)
